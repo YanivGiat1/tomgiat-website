@@ -9,7 +9,8 @@ import { useLanguage } from '@/lib/i18n';
 // sheet/tab > format "Comma-separated values (.csv)" > Publish.
 // Expected columns (header row): city_he, city_en, venue_he, venue_en,
 // date (YYYY-MM-DD), time (HH:MM, optional), note_he, note_en, ticketUrl.
-const SHEET_CSV_URL = '';
+const SHEET_CSV_URL =
+  'https://docs.google.com/spreadsheets/d/e/2PACX-1vSsUd0h5YkG6pV2vzDB41Rd5hCC_45iB9PmNZbDrP0YtBTEWuUKnm0PiUHH06pf7V9W8MAAXaFp-DJU/pub?output=csv';
 
 function parseDateTime(dateStr, timeStr) {
   return new Date(`${dateStr}T${timeStr || '00:00'}:00`);
@@ -130,7 +131,11 @@ export default function ScreeningsTable() {
       })
       .then((csvText) => {
         if (cancelled) return;
-        const parsed = Papa.parse(csvText, { header: true, skipEmptyLines: true });
+        const parsed = Papa.parse(csvText, {
+          header: true,
+          skipEmptyLines: true,
+          transformHeader: (header) => header.trim(),
+        });
         const cleaned = (parsed.data || [])
           .map((row) => ({
             city_he: (row.city_he || '').trim(),
