@@ -13,3 +13,24 @@ body {
 ::selection {
   @apply bg-accent text-white;
 }
+
+/* Font family switches with direction: Latin display/body fonts for
+   English, Hebrew-supporting Heebo for Hebrew (see app/layout.js). */
+html:not([dir='rtl']) {
+  --font-display: var(--font-display-en);
+  --font-body: var(--font-body-en);
+}
+
+html[dir='rtl'] {
+  --font-display: var(--font-display-he);
+  --font-body: var(--font-body-he);
+}
+
+/* Uppercase + heavy letter-spacing reads poorly on Hebrew script. */
+html[dir='rtl'] .uppercase {
+  text-transform: none;
+}
+
+html[dir='rtl'] .tracking-widest {
+  letter-spacing: 0;
+}

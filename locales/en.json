@@ -1,0 +1,116 @@
+{
+  "common": {
+    "siteTitle": "TOM GIAT",
+    "langHe": "עברית",
+    "langEn": "English"
+  },
+  "nav": {
+    "home": "Home",
+    "film": "One Eye Open",
+    "about": "About"
+  },
+  "footer": {
+    "tagline": "Documentary filmmaker",
+    "rights": "All rights reserved."
+  },
+  "social": {
+    "instagram": "Instagram",
+    "facebook": "Facebook",
+    "linktree": "Linktree"
+  },
+  "home": {
+    "eyebrow": "Documentary Filmmaker",
+    "heading": "TOM GIAT",
+    "intro": "Tom Giat is an Israeli filmmaker whose documentary work turns the camera inward, using diary-style reflection and personal footage to sit with questions of faith, duty, and identity.",
+    "ctaFilm": "Watch: One Eye Open",
+    "ctaAbout": "About Tom",
+    "latestEyebrow": "Latest Film",
+    "latestHeading": "One Eye Open",
+    "latestBody": "After October 7th, Tom was called up for reserve duty on Israel's northern border. What followed wasn't the war he expected, but a slow reckoning with faith, duty, and fear, captured in real time. Winner of the Weil-Bloch Film Award, with its world premiere at Docaviv 2026.",
+    "latestLink": "Explore the film ↗"
+  },
+  "about": {
+    "eyebrow": "About",
+    "heading": "Tom Giat",
+    "portraitLabel": "Portrait",
+    "bio": [
+      "Tom Giat is an Israeli documentary filmmaker. Raised within a religious-Zionist community, questions of faith, duty, and belonging run through his work long before they became the subject of a film.",
+      "In the aftermath of October 7th, Tom was called up for reserve duty along Israel's northern border. Between long stretches of waiting and the sudden fear of rocket fire, he began filming himself, a private record that would become his debut feature documentary, One Eye Open.",
+      "The film premiered at Docaviv 2026 and won the Weil-Bloch Film Award."
+    ]
+  },
+  "oneEyeOpen": {
+    "filmBy": "A film by Tom Giat",
+    "title": "ONE EYE OPEN",
+    "titleSecondary": "עין אחת פקוחה",
+    "tagline": "A state coming apart, seen through the moral doubt in a soldier's eyes.",
+    "trailerComingSoon": "Trailer coming soon",
+    "synopsisHeading": "Synopsis",
+    "synopsis": [
+      "In the aftermath of October 7th, filmmaker Tom Giat was called up for reserve duty along Israel's northern border. He expected to face combat; instead, he found himself suspended in the strange rhythm of military bureaucracy, long, uneventful days broken only by the sudden fear of incoming rockets. Camera in hand, he began recording his own mind as it unraveled in real time, weaving together footage from home, private diary entries spoken to the lens, and phone calls with his mother, who could not hide her worry.",
+      "What emerges is not a war film in any conventional sense. It is a young reservist's interior reckoning with faith, obligation, and an identity shaped by a religious-Zionist upbringing that suddenly feels harder to reconcile. Giat wanted, more than once, to go home. But something kept him in place: a sense of duty he couldn't shake, and a quiet fear of what leaving might do to his mother's fragile calm. Offered leave, and later a replacement, he turned both down again and again, and even after someone finally took his place, he couldn't fully let himself relax."
+    ],
+    "factsHeading": "Film Facts",
+    "facts": [
+      ["Director", "Tom Giat"],
+      ["Producer", "Ohad Milstein"],
+      ["Runtime", "55 min"],
+      ["Genre", "Documentary"],
+      ["Country", "Israel"],
+      ["Year", "2026"],
+      ["Language", "Hebrew (English subtitles)"]
+    ],
+    "posterLabel": "Poster",
+    "stillsHeading": "Stills",
+    "stillLabels": ["Still 1", "Still 2", "Still 3"],
+    "awardsHeading": "Awards & Press",
+    "awardTitle": "Weil-Bloch Film Award — Winner ($50,000)",
+    "awardBody": "World premiere at Docaviv 2026, screened in the festival's Israeli competition.",
+    "pressReadMore": "Read more ↗",
+    "press": [
+      {
+        "outlet": "Haaretz",
+        "critic": "Pablo Utin",
+        "summary": "Describes it as an intimate documentary debut about a soldier's moral doubt — not a conventional war film, but an inward journey of self-questioning.",
+        "href": "https://www.haaretz.co.il/gallery/cinema/docaviv/2026-05-30/ty-article-review/.premium/0000019e-7753-dd51-affe-ff5b7a6b0000"
+      },
+      {
+        "outlet": "Mako",
+        "critic": "Zohar Tzelach",
+        "summary": "Names it a must-see film about the quiet burnout reserve soldiers have carried since October 7th.",
+        "href": "https://www.mako.co.il/culture-movies/Article-13891c4a5ce3e91026.htm"
+      },
+      {
+        "outlet": "Srita",
+        "critic": "Ofer Liebergall",
+        "summary": "Calls it emotionally devastating, built from Giat's own diary recordings and his worried calls home to his mother.",
+        "href": "https://srita.net/2026/05/31/docaviv_2026_1st_report"
+      },
+      {
+        "outlet": "Docaviv",
+        "critic": null,
+        "summary": "Official festival listing with synopsis and screening details from Docaviv, the Tel Aviv International Documentary Film Festival.",
+        "href": "https://www.docaviv.co.il/films/one-eye-open/"
+      }
+    ],
+    "screeningsHeading": "Screenings",
+    "followHeading": "Follow the Film"
+  },
+  "screenings": {
+    "headers": {
+      "city": "City",
+      "venue": "Venue",
+      "date": "Date",
+      "time": "Time",
+      "note": "Note",
+      "tickets": "Tickets"
+    },
+    "ticketsCta": "Tickets",
+    "comingSoon": "Coming soon",
+    "showPast": "Show past screenings ({count})",
+    "hidePast": "Hide past screenings",
+    "noneUpcoming": "No upcoming screenings right now — follow us for updates.",
+    "loading": "Loading screening times…",
+    "error": "Screening times are being updated, check back soon."
+  }
+}

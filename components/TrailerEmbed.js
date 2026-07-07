@@ -1,4 +1,10 @@
+'use client';
+
+import { useLanguage } from '@/lib/i18n';
+
 export default function TrailerEmbed({ youtubeId }) {
+  const { t } = useLanguage();
+
   if (!youtubeId) {
     return (
       <div className="flex aspect-video w-full items-center justify-center border border-zinc-800 bg-zinc-900">
@@ -8,7 +14,7 @@ export default function TrailerEmbed({ youtubeId }) {
               <path d="M8 5v14l11-7z" />
             </svg>
           </div>
-          <p className="text-xs uppercase tracking-widest text-zinc-500">Trailer coming soon</p>
+          <p className="text-xs uppercase tracking-widest text-zinc-500">{t.oneEyeOpen.trailerComingSoon}</p>
         </div>
       </div>
     );

@@ -3,16 +3,19 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
-
-const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/one-eye-open', label: 'One Eye Open' },
-  { href: '/about', label: 'About' },
-];
+import { useLanguage } from '@/lib/i18n';
+import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Header() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
+  const { t } = useLanguage();
+
+  const navLinks = [
+    { href: '/', label: t.nav.home },
+    { href: '/one-eye-open', label: t.nav.film },
+    { href: '/about', label: t.nav.about },
+  ];
 
   return (
     <header className="sticky top-0 z-50 border-b border-zinc-800 bg-charcoal-950/90 backdrop-blur">
@@ -22,10 +25,10 @@ export default function Header() {
           onClick={() => setOpen(false)}
           className="font-display text-2xl tracking-wider text-white"
         >
-          TOM GIAT
+          {t.common.siteTitle}
         </Link>
 
-        <nav className="hidden gap-8 md:flex">
+        <nav className="hidden items-center gap-8 md:flex">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -37,19 +40,23 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
+          <LanguageSwitcher />
         </nav>
 
-        <button
-          type="button"
-          aria-label="Toggle menu"
-          aria-expanded={open}
-          onClick={() => setOpen(!open)}
-          className="flex flex-col gap-1.5 md:hidden"
-        >
-          <span className={`block h-0.5 w-6 bg-white transition-transform ${open ? 'translate-y-2 rotate-45' : ''}`} />
-          <span className={`block h-0.5 w-6 bg-white transition-opacity ${open ? 'opacity-0' : ''}`} />
-          <span className={`block h-0.5 w-6 bg-white transition-transform ${open ? '-translate-y-2 -rotate-45' : ''}`} />
-        </button>
+        <div className="flex items-center gap-3 md:hidden">
+          <LanguageSwitcher />
+          <button
+            type="button"
+            aria-label="Toggle menu"
+            aria-expanded={open}
+            onClick={() => setOpen(!open)}
+            className="flex flex-col gap-1.5"
+          >
+            <span className={`block h-0.5 w-6 bg-white transition-transform ${open ? 'translate-y-2 rotate-45' : ''}`} />
+            <span className={`block h-0.5 w-6 bg-white transition-opacity ${open ? 'opacity-0' : ''}`} />
+            <span className={`block h-0.5 w-6 bg-white transition-transform ${open ? '-translate-y-2 -rotate-45' : ''}`} />
+          </button>
+        </div>
       </div>
 
       {open && (

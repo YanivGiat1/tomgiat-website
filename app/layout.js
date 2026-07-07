@@ -1,17 +1,34 @@
 import './globals.css';
-import { Bebas_Neue, Inter } from 'next/font/google';
+import { Bebas_Neue, Inter, Heebo } from 'next/font/google';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { LanguageProvider } from '@/lib/i18n';
 
-const display = Bebas_Neue({
+const displayEn = Bebas_Neue({
   subsets: ['latin'],
   weight: '400',
-  variable: '--font-display',
+  variable: '--font-display-en',
+  display: 'swap',
 });
 
-const body = Inter({
+const bodyEn = Inter({
   subsets: ['latin'],
-  variable: '--font-body',
+  variable: '--font-body-en',
+  display: 'swap',
+});
+
+const displayHe = Heebo({
+  subsets: ['hebrew', 'latin'],
+  weight: ['700', '900'],
+  variable: '--font-display-he',
+  display: 'swap',
+});
+
+const bodyHe = Heebo({
+  subsets: ['hebrew', 'latin'],
+  weight: ['300', '400', '500'],
+  variable: '--font-body-he',
+  display: 'swap',
 });
 
 export const metadata = {
@@ -35,11 +52,17 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${display.variable} ${body.variable}`}>
+    <html
+      lang="he"
+      dir="rtl"
+      className={`${displayEn.variable} ${bodyEn.variable} ${displayHe.variable} ${bodyHe.variable}`}
+    >
       <body className="flex min-h-screen flex-col bg-charcoal-950 font-sans">
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <LanguageProvider>
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </LanguageProvider>
       </body>
     </html>
   );
