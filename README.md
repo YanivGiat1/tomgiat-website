@@ -40,6 +40,28 @@ English) and is remembered in the visitor's browser via `localStorage`,
 so it persists across page navigation on the same device. The switcher
 itself lives in the header (`components/LanguageSwitcher.js`).
 
+### Editing text from a Google Sheet (no code changes)
+
+On top of the two JSON files above, `lib/i18n.js` also fetches a
+published Google Sheet ("Translations" tab) as CSV on every page load and
+overlays it onto the built-in text — same live-fetch mechanism as the
+screenings table below. This lets a non-technical editor change site
+copy from a spreadsheet instead of touching code.
+
+- Sheet columns: `key, he, en`. Each `key` is a dot-path into the
+  translation structure (e.g. `home.heading`, `about.bio.0`,
+  `oneEyeOpen.press.0.summary`).
+- Leave a cell blank to keep the built-in default from `locales/he.json`
+  / `locales/en.json` for that row.
+- The published CSV URL lives in `TRANSLATIONS_CSV_URL` at the top of
+  `lib/i18n.js`. Publish via the same File → Share → Publish to web →
+  CSV flow as the screenings sheet, just for the Translations tab.
+- Editing an existing row's `he`/`en` cell updates the site next time a
+  visitor loads the page (Google's publish cache can take a minute or
+  two to catch up). Adding a brand-new row with a key nothing in the
+  code reads does nothing — this only overrides text for fields the
+  site already renders.
+
 ## Live screenings from Google Sheets
 
 Screenings are **not** stored in the repo. `components/ScreeningsTable.js`
