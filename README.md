@@ -49,10 +49,15 @@ screenings table below. This lets a non-technical editor change site
 copy from a spreadsheet instead of touching code.
 
 - Sheet columns: `key, he, en`. Each `key` is a dot-path into the
-  translation structure (e.g. `home.heading`, `about.bio.0`,
-  `oneEyeOpen.press.0.summary`).
+  translation structure (e.g. `home.heading`, `about.bio.0`).
 - Leave a cell blank to keep the built-in default from `locales/he.json`
   / `locales/en.json` for that row.
+- `oneEyeOpen.press.*` and `oneEyeOpen.facts.*` rows are ignored even if
+  present in the sheet. Those are ordered arrays of structured content
+  (URLs, award grouping, etc.) maintained in code — matching sheet rows
+  to array items by position breaks the moment the array is reordered
+  or resized, so edit press/facts directly in `locales/he.json` /
+  `locales/en.json` instead.
 - The published CSV URL lives in `TRANSLATIONS_CSV_URL` at the top of
   `lib/i18n.js`. Publish via the same File → Share → Publish to web →
   CSV flow as the screenings sheet, just for the Translations tab.
