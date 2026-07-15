@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import PlaceholderImage from '@/components/PlaceholderImage';
+import CornerFrame from '@/components/CornerFrame';
 import { useLanguage } from '@/lib/i18n';
 
 export default function HomeContent() {
@@ -15,15 +16,18 @@ export default function HomeContent() {
           src="/images/hero-eye.jpg"
           alt=""
           showLabel={false}
+          priority
           className="absolute inset-0 -z-10 h-full w-full opacity-40"
         />
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-charcoal-950/40 via-charcoal-950/80 to-charcoal-950" />
 
         <div className="mx-auto max-w-4xl px-4 py-24 sm:px-6">
-          <p className="text-xs uppercase tracking-[0.3em] text-accent-light">{home.eyebrow}</p>
-          <h1 className="mt-4 font-display text-5xl leading-none tracking-wide text-white sm:text-6xl">
-            {home.heading}
-          </h1>
+          <CornerFrame>
+            <p className="text-xs uppercase tracking-[0.3em] text-gold">{home.eyebrow}</p>
+            <h1 className="mt-4 font-display text-5xl leading-none tracking-wide text-white sm:text-6xl">
+              {home.heading}
+            </h1>
+          </CornerFrame>
           <p className="mt-6 max-w-xl text-lg text-zinc-300 sm:text-xl">{home.intro}</p>
           <div className="mt-10 flex flex-wrap gap-4">
             <Link
@@ -43,7 +47,7 @@ export default function HomeContent() {
       </section>
 
       <section className="mx-auto max-w-5xl px-4 py-20 sm:px-6">
-        <p className="text-xs uppercase tracking-[0.3em] text-accent-light">{home.latestEyebrow}</p>
+        <p className="text-xs uppercase tracking-[0.3em] text-gold">{home.latestEyebrow}</p>
         <h2 className="mt-3 font-display text-4xl tracking-wide text-white">{home.latestHeading}</h2>
         <p className="mt-4 max-w-2xl text-lg leading-relaxed text-zinc-300">{home.latestBody}</p>
         <Link

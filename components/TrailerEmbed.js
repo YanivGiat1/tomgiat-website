@@ -2,10 +2,10 @@
 
 import { useLanguage } from '@/lib/i18n';
 
-export default function TrailerEmbed({ youtubeId }) {
+export default function TrailerEmbed({ youtubeId, driveFileId }) {
   const { t } = useLanguage();
 
-  if (!youtubeId) {
+  if (!youtubeId && !driveFileId) {
     return (
       <div className="flex aspect-video w-full items-center justify-center border border-zinc-800 bg-zinc-900">
         <div className="text-center">
@@ -20,11 +20,15 @@ export default function TrailerEmbed({ youtubeId }) {
     );
   }
 
+  const src = youtubeId
+    ? `https://www.youtube.com/embed/${youtubeId}`
+    : `https://drive.google.com/file/d/${driveFileId}/preview`;
+
   return (
     <div className="aspect-video w-full overflow-hidden border border-zinc-800">
       <iframe
         className="h-full w-full"
-        src={`https://www.youtube.com/embed/${youtubeId}`}
+        src={src}
         title="One Eye Open — Official Trailer"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen

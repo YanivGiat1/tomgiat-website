@@ -44,6 +44,7 @@
     "title": "ONE EYE OPEN",
     "titleSecondary": "עין אחת פקוחה",
     "tagline": "A state coming apart, seen through the moral doubt in a soldier's eyes.",
+    "awardHeroBadge": "Winner — Weil-Bloch Film Award 2026",
     "trailerComingSoon": "Trailer coming soon",
     "synopsisHeading": "Synopsis",
     "synopsis": [
@@ -58,7 +59,10 @@
       ["Genre", "Documentary"],
       ["Country", "Israel"],
       ["Year", "2026"],
-      ["Language", "Hebrew (English subtitles)"]
+      ["Language", "Hebrew (English subtitles)"],
+      ["Support", "Kadar Foundation, Mifal Hapayis"],
+      ["Docaviv DOCLAB", "Winner, Outstanding Project Award"],
+      ["Ophir Awards", "Shortlist selection"]
     ],
     "posterLabel": "Poster",
     "stillsHeading": "Stills",
@@ -67,30 +71,56 @@
     "awardTitle": "Weil-Bloch Film Award — Winner ($50,000)",
     "awardBody": "World premiere at Docaviv 2026, screened in the festival's Israeli competition.",
     "pressReadMore": "Read more ↗",
+    "pressMediaHeading": "In the Media",
     "press": [
+      {
+        "outlet": "Maariv",
+        "critic": null,
+        "group": "award",
+        "summary": "Reports the film's win of the 2026 Weil-Bloch Film Award — the New Fund for Cinema and Television's top prize, worth $50,000 — awarded at its Docaviv world premiere, and praises its precise cinematic language and rare emotional accuracy.",
+        "href": "https://www.maariv.co.il/culture/movies/article-1322811"
+      },
+      {
+        "outlet": "The Jerusalem Post",
+        "critic": "Hannah Brown",
+        "group": "award",
+        "summary": "Covers the award announcement in English, describing a documentary that follows reserve soldiers who answered the call and found themselves buckling under its weight — a personal look at the war from October 7th to today.",
+        "href": "https://www.jpost.com/israel-news/culture/article-897280"
+      },
       {
         "outlet": "Haaretz",
         "critic": "Pablo Utin",
+        "group": "media",
         "summary": "Describes it as an intimate documentary debut about a soldier's moral doubt — not a conventional war film, but an inward journey of self-questioning.",
         "href": "https://www.haaretz.co.il/gallery/cinema/docaviv/2026-05-30/ty-article-review/.premium/0000019e-7753-dd51-affe-ff5b7a6b0000"
       },
       {
         "outlet": "Mako",
         "critic": "Zohar Tzelach",
+        "group": "media",
         "summary": "Names it a must-see film about the quiet burnout reserve soldiers have carried since October 7th.",
         "href": "https://www.mako.co.il/culture-movies/Article-13891c4a5ce3e91026.htm"
       },
       {
         "outlet": "Srita",
         "critic": "Ofer Liebergall",
+        "group": "media",
         "summary": "Calls it emotionally devastating, built from Giat's own diary recordings and his worried calls home to his mother.",
         "href": "https://srita.net/2026/05/31/docaviv_2026_1st_report"
       },
       {
         "outlet": "Docaviv",
         "critic": null,
+        "group": "media",
         "summary": "Official festival listing with synopsis and screening details from Docaviv, the Tel Aviv International Documentary Film Festival.",
         "href": "https://www.docaviv.co.il/films/one-eye-open/"
+      },
+      {
+        "outlet": "Portfolio",
+        "critic": "Liron Rachel Erez",
+        "group": "media",
+        "summary": "A longer profile tracing Giat's path from teenage parkour in Modi'in to reserve duty on Mount Hermon, where filming began only after his first trip home — plus news of an Ophir Awards shortlist nod and an upcoming Yes Doku broadcast.",
+        "href": "https://www.prtfl.co.il/archives/256214"
       }
     ],
     "screeningsHeading": "Screenings",

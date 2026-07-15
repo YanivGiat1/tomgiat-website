@@ -101,5 +101,13 @@ the placeholder blocks are replaced automatically.
 
 ## Trailer
 
-Once the trailer is live on YouTube, set its video ID in
-`components/OneEyeOpenContent.js` (`YOUTUBE_ID` constant near the top).
+`components/TrailerEmbed.js` embeds either a YouTube video or a Google
+Drive file (in that priority order), controlled by two constants near the
+top of `components/OneEyeOpenContent.js`:
+
+- `YOUTUBE_ID` — once the trailer is live on YouTube, set its video ID
+  here and it takes priority over the Drive fallback.
+- `DRIVE_FILE_ID` — the file ID from a Drive share link
+  (`drive.google.com/file/d/<FILE_ID>/view`). The Drive file must be
+  shared as "Anyone with the link" (Viewer) for the embed to load for
+  visitors.

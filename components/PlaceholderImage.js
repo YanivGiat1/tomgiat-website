@@ -8,6 +8,7 @@ export default function PlaceholderImage({
   label = 'Image',
   className = '',
   showLabel = true,
+  priority = false,
 }) {
   const [failed, setFailed] = useState(false);
 
@@ -18,6 +19,8 @@ export default function PlaceholderImage({
         <img
           src={src}
           alt={alt}
+          loading={priority ? 'eager' : 'lazy'}
+          decoding="async"
           onError={() => setFailed(true)}
           className="absolute inset-0 h-full w-full object-cover"
         />

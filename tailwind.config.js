@@ -18,6 +18,10 @@ module.exports = {
           light: '#d1453c',
           dark: '#7a1a15',
         },
+        gold: {
+          DEFAULT: '#c9a876',
+          light: '#ddc294',
+        },
       },
       fontFamily: {
         display: ['var(--font-display)', 'sans-serif'],
