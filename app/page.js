@@ -1,17 +1,20 @@
 import HomeContent from '@/components/HomeContent';
 
 export const metadata = {
-  title: 'Home',
+  title: 'תם גיאת',
+  description:
+    'תם גיאת, יוצר קולנוע תיעודי ישראלי, במאי הסרט עין אחת פקוחה - חשבון נפש של חייל על אמונה, מחויבות וזהות בעקבות ה-7 באוקטובר.',
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: 'Tom Giat — Documentary Filmmaker',
+    title: 'תם גיאת — יוצר קולנוע תיעודי',
     description:
-      "Israeli documentary filmmaker Tom Giat, director of One Eye Open — a soldier's inner reckoning with faith, duty, and identity after October 7th.",
+      'תם גיאת, יוצר קולנוע תיעודי ישראלי, במאי הסרט עין אחת פקוחה - חשבון נפש של חייל על אמונה, מחויבות וזהות בעקבות ה-7 באוקטובר.',
     url: '/',
     siteName: 'Tom Giat',
-    locale: 'en_US',
+    locale: 'he_IL',
+    alternateLocale: ['en_US'],
     type: 'website',
   },
 };

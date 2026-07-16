@@ -34,18 +34,19 @@ const bodyHe = Heebo({
 export const metadata = {
   metadataBase: new URL('https://tomgiat.com'),
   title: {
-    default: 'Tom Giat — Documentary Filmmaker',
+    default: 'תם גיאת — יוצר קולנוע תיעודי',
     template: '%s · Tom Giat',
   },
   description:
-    "Israeli documentary filmmaker Tom Giat, director of One Eye Open — a soldier's inner reckoning with faith, duty, and identity after October 7th.",
+    'תם גיאת, יוצר קולנוע תיעודי ישראלי, במאי הסרט עין אחת פקוחה - חשבון נפש של חייל על אמונה, מחויבות וזהות בעקבות ה-7 באוקטובר.',
   openGraph: {
-    title: 'Tom Giat — Documentary Filmmaker',
+    title: 'תם גיאת — יוצר קולנוע תיעודי',
     description:
-      "Director of One Eye Open — a soldier's inner reckoning with faith, duty, and identity after October 7th.",
+      'תם גיאת, יוצר קולנוע תיעודי ישראלי, במאי הסרט עין אחת פקוחה - חשבון נפש של חייל על אמונה, מחויבות וזהות בעקבות ה-7 באוקטובר.',
     url: 'https://tomgiat.com',
     siteName: 'Tom Giat',
-    locale: 'en_US',
+    locale: 'he_IL',
+    alternateLocale: ['en_US'],
     type: 'website',
   },
 };

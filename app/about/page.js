@@ -1,18 +1,18 @@
 import AboutContent from '@/components/AboutContent';
 
 export const metadata = {
-  title: 'About',
-  description:
-    'Tom Giat is an Israeli documentary filmmaker and director of One Eye Open.',
+  title: 'אודות',
+  description: 'תם גיאת הוא יוצר קולנוע תיעודי ישראלי, במאי הסרט עין אחת פקוחה.',
   alternates: {
     canonical: '/about/',
   },
   openGraph: {
-    title: 'About · Tom Giat',
-    description: 'Tom Giat is an Israeli documentary filmmaker and director of One Eye Open.',
+    title: 'אודות · Tom Giat',
+    description: 'תם גיאת הוא יוצר קולנוע תיעודי ישראלי, במאי הסרט עין אחת פקוחה.',
     url: '/about/',
     siteName: 'Tom Giat',
-    locale: 'en_US',
+    locale: 'he_IL',
+    alternateLocale: ['en_US'],
     type: 'website',
   },
 };
