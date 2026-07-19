@@ -9,24 +9,24 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-zinc-800 bg-charcoal-950">
+    <footer className="border-t border-ink-300 bg-cream-200">
       <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
         <div className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
           <div>
-            <p className="font-display text-xl tracking-wider text-white">{t.common.siteTitle}</p>
-            <p className="mt-1 text-sm text-zinc-500">{t.footer.tagline}</p>
+            <p className="font-display text-xl tracking-wider text-ink-950">{t.common.siteTitle}</p>
+            <p className="mt-1 text-sm text-ink-400">{t.footer.tagline}</p>
           </div>
 
-          <nav className="flex gap-6 text-sm uppercase tracking-widest text-zinc-400">
-            <Link href="/" className="hover:text-accent-light">{t.nav.home}</Link>
-            <Link href="/one-eye-open" className="hover:text-accent-light">{t.nav.film}</Link>
-            <Link href="/about" className="hover:text-accent-light">{t.nav.about}</Link>
+          <nav className="flex gap-6 text-sm uppercase tracking-widest text-ink-600">
+            <Link href="/" className="hover:text-sage-dark">{t.nav.home}</Link>
+            <Link href="/one-eye-open" className="hover:text-sage-dark">{t.nav.film}</Link>
+            <Link href="/about" className="hover:text-sage-dark">{t.nav.about}</Link>
           </nav>
 
           <SocialLinks />
         </div>
 
-        <p className="mt-8 border-t border-zinc-900 pt-6 text-xs text-zinc-600">
+        <p className="mt-8 border-t border-ink-300 pt-6 text-xs text-ink-400">
           © {year} {t.common.siteTitle}. {t.footer.rights}
         </p>
       </div>

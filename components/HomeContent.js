@@ -11,51 +11,53 @@ export default function HomeContent() {
 
   return (
     <>
-      <section className="relative flex min-h-[80vh] items-center overflow-hidden border-b border-zinc-800">
-        <PlaceholderImage
-          src="/images/hero-eye.jpg"
-          alt=""
-          showLabel={false}
-          priority
-          className="absolute inset-0 -z-10 h-full w-full opacity-40"
-        />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-charcoal-950/40 via-charcoal-950/80 to-charcoal-950" />
-
-        <div className="mx-auto max-w-4xl px-4 py-24 sm:px-6">
-          <CornerFrame>
-            <p className="text-xs uppercase tracking-[0.3em] text-gold">{home.eyebrow}</p>
-            <h1 className="mt-4 font-display text-5xl leading-none tracking-wide text-white sm:text-6xl">
-              {home.heading}
-            </h1>
-          </CornerFrame>
-          <p className="mt-6 max-w-xl text-lg text-zinc-300 sm:text-xl">{home.intro}</p>
-          <div className="mt-10 flex flex-wrap gap-4">
-            <Link
-              href="/one-eye-open"
-              className="border border-accent bg-accent px-6 py-3 text-sm uppercase tracking-widest text-white transition-colors hover:bg-accent-dark"
-            >
-              {home.ctaFilm}
-            </Link>
-            <Link
-              href="/about"
-              className="border border-zinc-700 px-6 py-3 text-sm uppercase tracking-widest text-zinc-300 transition-colors hover:border-zinc-500 hover:text-white"
-            >
-              {home.ctaAbout}
-            </Link>
-          </div>
+      <section className="mx-auto max-w-4xl px-4 pb-12 pt-20 text-center sm:px-6 sm:pt-28">
+        <CornerFrame className="inline-block">
+          <p className="text-xs uppercase tracking-[0.3em] text-sage-dark">{home.eyebrow}</p>
+          <h1 className="mt-4 font-display text-5xl leading-tight tracking-wide text-ink-950 sm:text-6xl">
+            {home.heading}
+          </h1>
+        </CornerFrame>
+        <p className="mx-auto mt-6 max-w-xl text-lg text-ink-600 sm:text-xl">{home.intro}</p>
+        <div className="mt-10 flex flex-wrap justify-center gap-4">
+          <Link
+            href="/one-eye-open"
+            className="border border-sage bg-sage px-6 py-3 text-sm uppercase tracking-widest text-cream-100 transition-colors hover:bg-sage-dark hover:border-sage-dark"
+          >
+            {home.ctaFilm}
+          </Link>
+          <Link
+            href="/about"
+            className="border border-ink-300 px-6 py-3 text-sm uppercase tracking-widest text-ink-600 transition-colors hover:border-ink-600 hover:text-ink-950"
+          >
+            {home.ctaAbout}
+          </Link>
         </div>
       </section>
 
-      <section className="mx-auto max-w-5xl px-4 py-20 sm:px-6">
-        <p className="text-xs uppercase tracking-[0.3em] text-gold">{home.latestEyebrow}</p>
-        <h2 className="mt-3 font-display text-4xl tracking-wide text-white">{home.latestHeading}</h2>
-        <p className="mt-4 max-w-2xl text-lg leading-relaxed text-zinc-300">{home.latestBody}</p>
-        <Link
-          href="/one-eye-open"
-          className="mt-6 inline-block text-sm uppercase tracking-widest text-accent-light hover:text-accent"
-        >
-          {home.latestLink}
-        </Link>
+      <section className="mx-auto max-w-5xl px-4 py-16 sm:px-6">
+        <div className="grid gap-10 sm:grid-cols-[1fr_1.15fr] sm:items-center">
+          <div className="relative">
+            <div className="absolute -inset-4 -z-10 bg-sage/25 sm:-inset-6" />
+            <PlaceholderImage
+              src="/images/hero-eye.jpg"
+              alt=""
+              label={home.latestHeading}
+              className="aspect-[4/3] w-full"
+            />
+          </div>
+          <div>
+            <p className="text-xs uppercase tracking-[0.3em] text-sage-dark">{home.latestEyebrow}</p>
+            <h2 className="mt-3 font-display text-4xl tracking-wide text-ink-950">{home.latestHeading}</h2>
+            <p className="mt-4 text-lg leading-relaxed text-ink-600">{home.latestBody}</p>
+            <Link
+              href="/one-eye-open"
+              className="mt-6 inline-block text-sm uppercase tracking-widest text-sage-dark hover:text-sage"
+            >
+              {home.latestLink}
+            </Link>
+          </div>
+        </div>
       </section>
     </>
   );

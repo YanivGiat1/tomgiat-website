@@ -7,11 +7,11 @@ html {
 }
 
 body {
-  @apply bg-charcoal-950 text-zinc-100 antialiased;
+  @apply bg-cream-200 text-ink-950 antialiased;
 }
 
 ::selection {
-  @apply bg-accent text-white;
+  @apply bg-sage text-cream-100;
 }
 
 /* Font family switches with direction: Latin display/body fonts for

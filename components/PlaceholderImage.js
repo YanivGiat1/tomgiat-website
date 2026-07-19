@@ -13,7 +13,7 @@ export default function PlaceholderImage({
   const [failed, setFailed] = useState(false);
 
   return (
-    <div className={`relative overflow-hidden bg-zinc-900 ${className}`}>
+    <div className={`relative overflow-hidden bg-cream-300 ${className}`}>
       {!failed && src && (
         // eslint-disable-next-line @next/next/no-img-element
         <img
@@ -26,8 +26,8 @@ export default function PlaceholderImage({
         />
       )}
       {(failed || !src) && showLabel && (
-        <div className="absolute inset-0 flex items-center justify-center border border-zinc-800">
-          <span className="px-4 text-center text-xs uppercase tracking-widest text-zinc-600">
+        <div className="absolute inset-0 flex items-center justify-center border border-ink-300">
+          <span className="px-4 text-center text-xs uppercase tracking-widest text-ink-400">
             {label}
           </span>
         </div>

@@ -18,14 +18,14 @@ export default function SocialLinks({ className = '' }) {
   ];
 
   return (
-    <div className={`flex gap-5 text-sm uppercase tracking-widest text-zinc-400 ${className}`}>
+    <div className={`flex gap-5 text-sm uppercase tracking-widest text-ink-400 ${className}`}>
       {links.map((link) => (
         <a
           key={link.key}
           href={link.href}
           target="_blank"
           rel="noopener noreferrer"
-          className="transition-colors hover:text-accent-light"
+          className="transition-colors hover:text-sage-dark"
         >
           {link.label}
         </a>

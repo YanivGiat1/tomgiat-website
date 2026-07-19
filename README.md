@@ -52,12 +52,13 @@ copy from a spreadsheet instead of touching code.
   translation structure (e.g. `home.heading`, `about.bio.0`).
 - Leave a cell blank to keep the built-in default from `locales/he.json`
   / `locales/en.json` for that row.
-- `oneEyeOpen.press.*` and `oneEyeOpen.facts.*` rows are ignored even if
-  present in the sheet. Those are ordered arrays of structured content
-  (URLs, award grouping, etc.) maintained in code — matching sheet rows
-  to array items by position breaks the moment the array is reordered
-  or resized, so edit press/facts directly in `locales/he.json` /
-  `locales/en.json` instead.
+- `oneEyeOpen.facts.*` rows are ignored even if present in the sheet. It's
+  an ordered array of structured content maintained in code — matching
+  sheet rows to array items by position breaks the moment the array is
+  reordered or resized, so edit facts directly in `locales/he.json` /
+  `locales/en.json` instead. Press and Awards used to have this same
+  problem, which is why they've been moved to their own dedicated sheet
+  tabs instead (see below) — no code changes needed to add a row there.
 - The published CSV URL lives in `TRANSLATIONS_CSV_URL` at the top of
   `lib/i18n.js`. Publish via the same File → Share → Publish to web →
   CSV flow as the screenings sheet, just for the Translations tab.
@@ -97,6 +98,41 @@ The table sorts by date (soonest first), auto-hides past screenings
 behind a collapsible "show past screenings" toggle, shows a loading
 state while fetching, and falls back to a friendly bilingual message if
 the fetch fails or `SHEET_CSV_URL` hasn't been set yet.
+
+## Press & Awards from Google Sheets
+
+Like screenings, Press and Awards content is **not** stored in the repo.
+`components/PressList.js` and `components/AwardsTimeline.js` each fetch
+their own published Google Sheet tab as CSV in the browser, so **editing
+the Google Sheet is the entire workflow for adding, changing, or removing
+a press mention or award** — no code changes, no GitHub, no redeploy.
+Adding a new row at the bottom of either tab is all it takes; there's no
+row-position matching to break.
+
+**Press tab** — header row exactly:
+`date, outlet_he, outlet_en, critic_he, critic_en, group, summary_he, summary_en, href`
+- `date` is optional (`YYYY-MM-DD`); rows with a date sort newest-first,
+  rows without one keep the sheet's row order at the end.
+- `critic_he` / `critic_en` are optional (leave blank when there's no
+  named byline).
+- `group` must be exactly `award` or `media` — controls which tag label
+  shows on the card.
+- Paste the published CSV URL into `PRESS_CSV_URL` at the top of
+  `components/PressList.js`.
+
+**Awards tab** — header row exactly:
+`year, award_he, award_en, status_he, status_en, presenter_he, presenter_en, amount, description_he, description_en, href, featured`
+- `year` drives the timeline order (newest first).
+- `status_*`, `presenter_*`, `amount`, `description_*`, `href` are all optional.
+- Set `featured` to `yes` on exactly one row (the current headline award)
+  to render it as the larger highlighted card at the top of the timeline.
+- Paste the published CSV URL into `AWARDS_CSV_URL` at the top of
+  `components/AwardsTimeline.js`.
+
+Both use the same File → Share → **Publish to web** → CSV flow as the
+screenings sheet, just for their own tab. Both show a loading state while
+fetching and a friendly bilingual message if the fetch fails or no rows
+exist yet.
 
 ## Adding real images
 

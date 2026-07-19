@@ -30,7 +30,7 @@ function TicketAction({ ticketUrl, t }) {
   const hasTicket = typeof ticketUrl === 'string' && ticketUrl.startsWith('http');
 
   if (!hasTicket) {
-    return <span className="text-xs uppercase tracking-widest text-zinc-600">{t.screenings.comingSoon}</span>;
+    return <span className="text-xs uppercase tracking-widest text-ink-400">{t.screenings.comingSoon}</span>;
   }
 
   return (
@@ -38,7 +38,7 @@ function TicketAction({ ticketUrl, t }) {
       href={ticketUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-block whitespace-nowrap border border-accent px-4 py-1.5 text-xs uppercase tracking-widest text-accent-light transition-colors hover:bg-accent hover:text-white"
+      className="inline-block whitespace-nowrap border border-sage px-4 py-1.5 text-xs uppercase tracking-widest text-sage-dark transition-colors hover:bg-sage hover:text-cream-100"
     >
       {t.screenings.ticketsCta}
     </a>
@@ -56,7 +56,7 @@ function ScreeningsList({ list, faded, locale, t }) {
     <>
       <table className="hidden w-full border-collapse md:table">
         <thead>
-          <tr className="border-b border-zinc-800 text-xs uppercase tracking-widest text-zinc-500">
+          <tr className="border-b border-ink-300 text-xs uppercase tracking-widest text-ink-400">
             <th className="py-3 text-start font-normal">{t.screenings.headers.city}</th>
             <th className="py-3 text-start font-normal">{t.screenings.headers.venue}</th>
             <th className="py-3 text-start font-normal">{t.screenings.headers.date}</th>
@@ -67,12 +67,12 @@ function ScreeningsList({ list, faded, locale, t }) {
         </thead>
         <tbody>
           {list.map((s, i) => (
-            <tr key={`${s.date}-${s.venue_he}-${i}`} className={`border-b border-zinc-900 ${faded ? 'opacity-50' : ''}`}>
-              <td className="py-4 font-display text-lg text-white">{field(s, 'city')}</td>
-              <td className="py-4 text-zinc-300">{field(s, 'venue')}</td>
-              <td className="py-4 text-zinc-400">{formatDate(s.date)}</td>
-              <td className="py-4 text-zinc-400">{s.time || '—'}</td>
-              <td className="py-4 text-sm text-zinc-500">{field(s, 'note')}</td>
+            <tr key={`${s.date}-${s.venue_he}-${i}`} className={`border-b border-ink-300/60 ${faded ? 'opacity-50' : ''}`}>
+              <td className="py-4 font-display text-lg text-ink-950">{field(s, 'city')}</td>
+              <td className="py-4 text-ink-600">{field(s, 'venue')}</td>
+              <td className="py-4 text-ink-400">{formatDate(s.date)}</td>
+              <td className="py-4 text-ink-400">{s.time || '—'}</td>
+              <td className="py-4 text-sm text-ink-400">{field(s, 'note')}</td>
               <td className="py-4"><TicketAction ticketUrl={s.ticketUrl} t={t} /></td>
             </tr>
           ))}
@@ -83,17 +83,17 @@ function ScreeningsList({ list, faded, locale, t }) {
         {list.map((s, i) => (
           <div
             key={`${s.date}-${s.venue_he}-${i}`}
-            className={`border border-zinc-800 bg-zinc-900/50 p-4 ${faded ? 'opacity-50' : ''}`}
+            className={`border border-ink-300 bg-cream-100 p-4 ${faded ? 'opacity-50' : ''}`}
           >
             <div className="flex items-baseline justify-between gap-2">
-              <span className="font-display text-xl text-white">{field(s, 'city')}</span>
-              <span className="whitespace-nowrap text-sm text-zinc-400">
+              <span className="font-display text-xl text-ink-950">{field(s, 'city')}</span>
+              <span className="whitespace-nowrap text-sm text-ink-400">
                 {formatDate(s.date)}
                 {s.time ? ` · ${s.time}` : ''}
               </span>
             </div>
-            <p className="mt-1 text-sm text-zinc-300">{field(s, 'venue')}</p>
-            {field(s, 'note') && <p className="mt-1 text-xs text-zinc-500">{field(s, 'note')}</p>}
+            <p className="mt-1 text-sm text-ink-600">{field(s, 'venue')}</p>
+            {field(s, 'note') && <p className="mt-1 text-xs text-ink-400">{field(s, 'note')}</p>}
             <div className="mt-3">
               <TicketAction ticketUrl={s.ticketUrl} t={t} />
             </div>
@@ -171,11 +171,11 @@ export default function ScreeningsTable() {
   const past = now ? sorted.filter((r) => parseDateTime(r.date, r.time) < now) : [];
 
   if (status === 'loading') {
-    return <p className="text-zinc-500">{t.screenings.loading}</p>;
+    return <p className="text-ink-400">{t.screenings.loading}</p>;
   }
 
   if (status === 'error') {
-    return <p className="text-zinc-500">{t.screenings.error}</p>;
+    return <p className="text-ink-400">{t.screenings.error}</p>;
   }
 
   return (
@@ -183,7 +183,7 @@ export default function ScreeningsTable() {
       {upcoming.length > 0 ? (
         <ScreeningsList list={upcoming} faded={false} locale={locale} t={t} />
       ) : (
-        <p className="text-zinc-500">{t.screenings.noneUpcoming}</p>
+        <p className="text-ink-400">{t.screenings.noneUpcoming}</p>
       )}
 
       {past.length > 0 && (
@@ -191,7 +191,7 @@ export default function ScreeningsTable() {
           <button
             type="button"
             onClick={() => setShowPast(!showPast)}
-            className="text-xs uppercase tracking-widest text-zinc-500 hover:text-zinc-300"
+            className="text-xs uppercase tracking-widest text-ink-400 hover:text-ink-600"
           >
             {showPast ? t.screenings.hidePast : t.screenings.showPast.replace('{count}', String(past.length))}
           </button>

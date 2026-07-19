@@ -1,12 +1,12 @@
 import './globals.css';
-import { Bebas_Neue, Inter, Heebo } from 'next/font/google';
+import { Playfair_Display, Inter, Heebo, Frank_Ruhl_Libre } from 'next/font/google';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { LanguageProvider } from '@/lib/i18n';
 
-const displayEn = Bebas_Neue({
+const displayEn = Playfair_Display({
   subsets: ['latin'],
-  weight: '400',
+  weight: ['500', '600', '700'],
   variable: '--font-display-en',
   display: 'swap',
 });
@@ -17,9 +17,9 @@ const bodyEn = Inter({
   display: 'swap',
 });
 
-const displayHe = Heebo({
+const displayHe = Frank_Ruhl_Libre({
   subsets: ['hebrew', 'latin'],
-  weight: ['700', '900'],
+  weight: ['500', '700'],
   variable: '--font-display-he',
   display: 'swap',
 });
@@ -58,7 +58,7 @@ export default function RootLayout({ children }) {
       dir="rtl"
       className={`${displayEn.variable} ${bodyEn.variable} ${displayHe.variable} ${bodyHe.variable}`}
     >
-      <body className="flex min-h-screen flex-col bg-charcoal-950 font-sans">
+      <body className="flex min-h-screen flex-col bg-cream-200 font-sans">
         <LanguageProvider>
           <Header />
           <main className="flex-1">{children}</main>

@@ -12,7 +12,7 @@ export default function LanguageSwitcher() {
         onClick={() => setLocale('he')}
         aria-pressed={locale === 'he'}
         className={`rounded px-2 py-1 text-xs transition-colors ${
-          locale === 'he' ? 'bg-accent text-white' : 'text-zinc-400 hover:text-white'
+          locale === 'he' ? 'bg-sage text-cream-100' : 'text-ink-400 hover:text-ink-950'
         }`}
       >
         🇮🇱 {t.common.langHe}
@@ -22,7 +22,7 @@ export default function LanguageSwitcher() {
         onClick={() => setLocale('en')}
         aria-pressed={locale === 'en'}
         className={`rounded px-2 py-1 text-xs transition-colors ${
-          locale === 'en' ? 'bg-accent text-white' : 'text-zinc-400 hover:text-white'
+          locale === 'en' ? 'bg-sage text-cream-100' : 'text-ink-400 hover:text-ink-950'
         }`}
       >
         🇬🇧 {t.common.langEn}

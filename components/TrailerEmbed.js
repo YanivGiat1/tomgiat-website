@@ -7,14 +7,14 @@ export default function TrailerEmbed({ youtubeId, driveFileId }) {
 
   if (!youtubeId && !driveFileId) {
     return (
-      <div className="flex aspect-video w-full items-center justify-center border border-zinc-800 bg-zinc-900">
+      <div className="flex aspect-video w-full items-center justify-center border border-ink-300 bg-cream-300">
         <div className="text-center">
-          <div className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-full border border-zinc-700 text-zinc-500">
+          <div className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-full border border-ink-300 text-ink-400">
             <svg viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6 translate-x-0.5">
               <path d="M8 5v14l11-7z" />
             </svg>
           </div>
-          <p className="text-xs uppercase tracking-widest text-zinc-500">{t.oneEyeOpen.trailerComingSoon}</p>
+          <p className="text-xs uppercase tracking-widest text-ink-400">{t.oneEyeOpen.trailerComingSoon}</p>
         </div>
       </div>
     );
@@ -25,7 +25,7 @@ export default function TrailerEmbed({ youtubeId, driveFileId }) {
     : `https://drive.google.com/file/d/${driveFileId}/preview`;
 
   return (
-    <div className="aspect-video w-full overflow-hidden border border-zinc-800">
+    <div className="aspect-video w-full overflow-hidden border border-ink-300">
       <iframe
         className="h-full w-full"
         src={src}
