@@ -44,27 +44,55 @@
     "title": "ONE EYE OPEN",
     "titleSecondary": "עין אחת פקוחה",
     "tagline": "A state coming apart, seen through the moral doubt in a soldier's eyes.",
-    "awardHeroBadge": "Winner — Weil-Bloch Film Award 2026",
+    "awardHeroBadge": "Winner of Docaviv 2026 Debut Film",
     "trailerComingSoon": "Trailer coming soon",
     "synopsisHeading": "Synopsis",
     "synopsis": [
-      "In the aftermath of October 7th, filmmaker Tom Giat was called up for reserve duty along Israel's northern border. He expected to face combat; instead, he found himself suspended in the strange rhythm of military bureaucracy, long, uneventful days broken only by the sudden fear of incoming rockets. Camera in hand, he began recording his own mind as it unraveled in real time, weaving together footage from home, private diary entries spoken to the lens, and phone calls with his mother, who could not hide her worry.",
-      "What emerges is not a war film in any conventional sense. It is a young reservist's interior reckoning with faith, obligation, and an identity shaped by a religious-Zionist upbringing that suddenly feels harder to reconcile. Giat wanted, more than once, to go home. But something kept him in place: a sense of duty he couldn't shake, and a quiet fear of what leaving might do to his mother's fragile calm. Offered leave, and later a replacement, he turned both down again and again, and even after someone finally took his place, he couldn't fully let himself relax."
+      "A reserve soldier experiences a breakdown against the backdrop of a prolonged war with no end in sight. Seen from within, the film follows the quiet voices of a group of reservists who answered the call to serve, only to find themselves groaning under the public burden placed on them.",
+      "Despite the injustice, despite the disconnection from ordinary life, despite the despair and exhaustion. An intimate, unguarded documentation from within the war — from October 7th to this very day."
     ],
     "factsHeading": "Film Facts",
     "facts": [
-      ["Director", "Tom Giat"],
-      ["Producer", "Ohad Milstein"],
-      ["Runtime", "55 min"],
-      ["Genre", "Documentary"],
-      ["Country", "Israel"],
-      ["Year", "2026"],
-      ["Language", "Hebrew (English subtitles)"],
-      ["Support", "Kadar Foundation, Mifal Hapayis"]
+      [
+        "Director",
+        "Tom Giat"
+      ],
+      [
+        "Producer",
+        "Ohad Milstein"
+      ],
+      [
+        "Runtime",
+        "55 min"
+      ],
+      [
+        "Genre",
+        "Documentary"
+      ],
+      [
+        "Country",
+        "Israel"
+      ],
+      [
+        "Year",
+        "2026"
+      ],
+      [
+        "Language",
+        "Hebrew (English subtitles)"
+      ],
+      [
+        "Support",
+        "Kadar Foundation, Mifal Hapayis"
+      ]
     ],
     "posterLabel": "Poster",
-    "stillsHeading": "Stills",
-    "stillLabels": ["Still 1", "Still 2", "Still 3"],
+    "stillsHeading": "",
+    "stillLabels": [
+      "Still 1",
+      "Still 2",
+      "Still 3"
+    ],
     "awardsHeading": "Awards & Press",
     "awardsSubheading": "Awards",
     "pressSubheading": "In the Media",

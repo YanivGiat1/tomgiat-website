@@ -32,7 +32,7 @@ const bodyHe = Heebo({
 });
 
 export const metadata = {
-  metadataBase: new URL('https://tomgiat.com'),
+  metadataBase: new URL('https://www.tomgiat.com'),
   title: {
     default: 'תם גיאת — יוצר קולנוע תיעודי',
     template: '%s · Tom Giat',
@@ -43,7 +43,7 @@ export const metadata = {
     title: 'תם גיאת — יוצר קולנוע תיעודי',
     description:
       'תם גיאת, יוצר קולנוע תיעודי ישראלי, במאי הסרט עין אחת פקוחה - חשבון נפש של חייל על אמונה, מחויבות וזהות בעקבות ה-7 באוקטובר.',
-    url: 'https://tomgiat.com',
+    url: 'https://www.tomgiat.com',
     siteName: 'Tom Giat',
     locale: 'he_IL',
     alternateLocale: ['en_US'],

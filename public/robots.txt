@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tomgiat.com/sitemap.xml
+Sitemap: https://www.tomgiat.com/sitemap.xml
