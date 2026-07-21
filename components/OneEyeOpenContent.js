@@ -45,9 +45,15 @@ export default function OneEyeOpenContent() {
             </div>
           </div>
 
-          <div className="relative">
+          <div className="relative mx-auto w-full max-w-xs sm:max-w-none sm:w-4/5">
             <div className="absolute -inset-4 -z-10 bg-sage/25 sm:-inset-6" />
-            <PlaceholderImage src="/images/hero-eye.jpg" alt="" showLabel={false} priority className="aspect-[4/3] w-full" />
+            <PlaceholderImage
+              src="/images/poster.jpg"
+              alt="One Eye Open poster"
+              label={oeo.posterLabel}
+              priority
+              className="aspect-[2/3] w-full"
+            />
           </div>
         </div>
       </section>
@@ -65,46 +71,43 @@ export default function OneEyeOpenContent() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-5xl px-4 py-16 sm:px-6">
-        <div className="grid gap-10 md:grid-cols-[280px_1fr]">
-          <PlaceholderImage
-            src="/images/poster.jpg"
-            alt="One Eye Open poster"
-            label={oeo.posterLabel}
-            className="aspect-[2/3] w-full"
-          />
-          <div>
-            <h2 className="font-display text-3xl tracking-wide text-ink-950">{oeo.factsHeading}</h2>
-            <div className="mt-6">
-              <FilmFacts />
-            </div>
-          </div>
+      <section id="screenings" className="mx-auto max-w-5xl px-4 py-16 sm:px-6">
+        <h2 className="font-display text-3xl tracking-wide text-ink-950">{oeo.screeningsHeading}</h2>
+        <div className="mt-8">
+          <ScreeningsTable />
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-3xl px-4 py-16 sm:px-6">
+        <h2 className="font-display text-3xl tracking-wide text-ink-950">{oeo.factsHeading}</h2>
+        <div className="mt-6">
+          <FilmFacts />
         </div>
       </section>
 
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
-        <h2 className="font-display text-3xl tracking-wide text-ink-950">{oeo.stillsHeading}</h2>
+        {oeo.stillsHeading && (
+          <h2 className="font-display text-3xl tracking-wide text-ink-950">{oeo.stillsHeading}</h2>
+        )}
         <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
           <PlaceholderImage
             src="/images/still-1.jpg"
             alt="Film still"
             label={oeo.stillLabels[0]}
-            className="aspect-[4/3] sm:row-span-2 sm:aspect-auto sm:h-full"
+            className="aspect-video w-full"
           />
-          <div className="grid grid-cols-1 gap-4 sm:grid-rows-2">
-            <PlaceholderImage
-              src="/images/still-2.jpg"
-              alt="Film still"
-              label={oeo.stillLabels[1]}
-              className="aspect-video"
-            />
-            <PlaceholderImage
-              src="/images/still-3.jpg"
-              alt="Film still"
-              label={oeo.stillLabels[2]}
-              className="aspect-video"
-            />
-          </div>
+          <PlaceholderImage
+            src="/images/still-2.jpg"
+            alt="Film still"
+            label={oeo.stillLabels[1]}
+            className="aspect-video w-full"
+          />
+          <PlaceholderImage
+            src="/images/still-3.jpg"
+            alt="Film still"
+            label={oeo.stillLabels[2]}
+            className="aspect-video w-full"
+          />
         </div>
       </section>
 
@@ -123,13 +126,6 @@ export default function OneEyeOpenContent() {
           <div className="mt-6">
             <PressList />
           </div>
-        </div>
-      </section>
-
-      <section id="screenings" className="mx-auto max-w-5xl px-4 py-16 sm:px-6">
-        <h2 className="font-display text-3xl tracking-wide text-ink-950">{oeo.screeningsHeading}</h2>
-        <div className="mt-8">
-          <ScreeningsTable />
         </div>
       </section>
 

@@ -51,7 +51,10 @@ copy from a spreadsheet instead of touching code.
 - Sheet columns: `key, he, en`. Each `key` is a dot-path into the
   translation structure (e.g. `home.heading`, `about.bio.0`).
 - Leave a cell blank to keep the built-in default from `locales/he.json`
-  / `locales/en.json` for that row.
+  / `locales/en.json` for that row. To deliberately make a field blank
+  instead (e.g. hide an optional section heading), type a single `-` in
+  that cell — a plain empty cell can't mean "blank" since it already
+  means "keep the default."
 - `oneEyeOpen.facts.*` rows are ignored even if present in the sheet. It's
   an ordered array of structured content maintained in code — matching
   sheet rows to array items by position breaks the moment the array is
