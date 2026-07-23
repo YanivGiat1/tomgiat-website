@@ -79,6 +79,27 @@ export default function OneEyeOpenContent() {
       </section>
 
       <section className="mx-auto max-w-3xl px-4 py-16 sm:px-6">
+        <h2 className="font-display text-3xl tracking-wide text-ink-950">{oeo.contactHeading}</h2>
+        <div className="mt-6 space-y-2 text-lg leading-relaxed text-ink-600">
+          {oeo.contactText.split('\n').map((line, i) => {
+            const trimmed = line.trim();
+            const isEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmed);
+            return (
+              <p key={i}>
+                {isEmail ? (
+                  <a href={`mailto:${trimmed}`} className="text-sage-dark hover:text-sage">
+                    {trimmed}
+                  </a>
+                ) : (
+                  line
+                )}
+              </p>
+            );
+          })}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-3xl px-4 py-16 sm:px-6">
         <h2 className="font-display text-3xl tracking-wide text-ink-950">{oeo.factsHeading}</h2>
         <div className="mt-6">
           <FilmFacts />
